@@ -1,4 +1,4 @@
-#include "ErrorCode.tars"
+#include "StatusCode.tars"
 
 module RentHouse
 {
@@ -13,8 +13,8 @@ module RentHouse
 
     interface DataBaseService {
         int hasUser(string user, out bool userExist);
-        int login(string user, string password, out int user_id, out User loginUser, out ErrorCode error);
+        int login(string user, string password, out int user_id, out User loginUser, out StatusCode status);
         // 创建用户。创建时，role 默认值为 normal
-        int createUser(string user, string password, string gender, string last_login_time, out int user_id, out User loginUser, out ErrorCode error);
+        int createUser(string user, string password, string gender, string last_login_time, out int user_id, out User loginUser, out StatusCode status);
     };
 };
