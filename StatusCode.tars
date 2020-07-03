@@ -1,6 +1,6 @@
 module RentHouse
 {
-    enum ErrorCode
+    enum StatusCode
     {
         SUCCESS = 200,
         NOT_FOUND = 404,
