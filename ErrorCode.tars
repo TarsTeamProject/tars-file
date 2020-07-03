@@ -7,5 +7,6 @@ module RentHouse
         INTERNAL_ERROR = 500,
         USER_NOT_EXSIT = 1001,
         WRONG_PW_OR_NAME = 1002,
+        USER_EXSIT = 1003,
     };
 };
