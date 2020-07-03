@@ -4,11 +4,11 @@ module RentHouse
 {
 
     struct User {
-        1 require string name;
-        2 require string gender;
-        3 require string avatar_url;
-        4 require string last_login_time;
-        5 require string role;
+        0 require string name;
+        1 require string gender;
+        2 require string avatar_url;
+        3 require string last_login_time;
+        4 require string role;
     };
 
     interface DataBaseService {
