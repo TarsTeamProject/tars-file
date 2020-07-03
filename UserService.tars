@@ -4,6 +4,7 @@
 module RentHouse
 {
     interface UserService {
+        // 用户登录
         int login(string name, string password, out User loginUser, out ErrorCode error);
     };
 };
