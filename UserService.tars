@@ -1,0 +1,10 @@
+#include "DataBaseService.tars"
+#include "StatusCode.tars"
+
+module RentHouse
+{
+    interface UserService {
+        // 用户登录
+        int login(string name, string password, out User loginUser, out StatusCode status);
+    };
+};

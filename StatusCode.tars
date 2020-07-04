@@ -1,0 +1,16 @@
+module RentHouse
+{
+    enum StatusCode
+    {
+        // 错误状态码（数字）在服务节点中传递，如果下游服务节点收到上游的非 SUCCESS 状态码，则立刻返回此状态码。
+        // Api Interface 收到状态码后，将其转换成有语义的错误信息返回给前端。
+        // 所有状态码参考: 
+        // https://docs.google.com/spreadsheets/d/15XNplEK08tlcVM1jdbQiq7kxDbacI_rl9g870iuFDVg/edit#gid=0
+        SUCCESS = 200,
+        NOT_FOUND = 404,
+        INTERNAL_ERROR = 500,
+        USER_NOT_EXSIT = 1001,
+        WRONG_PW_OR_NAME = 1002,
+        USER_EXSIT = 1003,
+    };
+};

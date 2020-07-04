@@ -1,0 +1,8 @@
+# other files
+.DS_Store
+
+# gitignore all tars2node file
+tars2node
+*.js
+
+# gitignore all tars2java file
