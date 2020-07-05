@@ -12,9 +12,9 @@ module RentHouse
     };
 
     interface DataBaseService {
-        int hasUser(string user, out bool userExist);
-        int login(string user, string password, out int user_id, out User loginUser, out StatusCode status);
+        int hasUser(string name, out bool userExist);
+        int login(string name, string password, string login_time, out int user_id, out User user, out StatusCode status);
         // 创建用户。创建时，role 默认值为 normal
-        int createUser(string user, string password, string gender, string last_login_time, out int user_id, out User loginUser, out StatusCode status);
+        int createUser(string name, string password, string gender, string avatar_url, string login_time, out int user_id, out User user, out StatusCode status);
     };
 };
