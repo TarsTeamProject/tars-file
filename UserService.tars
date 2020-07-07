@@ -5,6 +5,7 @@ module RentHouse
 {
     interface UserService {
         // 用户登录
-        int login(string name, string password, out User loginUser, out StatusCode status);
+        int login(string name, string password, out int user_id, out User user, out StatusCode status);
+        int register(string name, string password, string gender, string avatar_url, out int user_id, out User user, out StatusCode status);
     };
 };
