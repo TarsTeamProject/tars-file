@@ -4,6 +4,8 @@
 module RentHouse
 {
     interface UserService {
+        // 检查是否存在用户记录
+        int hasUser(string uuid, out bool userExist);
         // 通过给定的 uuid 和 User，注册用户信息。
         int signup(string uuid, User user, out StatusCode status);
         // 通过给定的 uuid 返回 User。
