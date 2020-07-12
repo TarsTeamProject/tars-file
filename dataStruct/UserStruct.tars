@@ -1,0 +1,18 @@
+module RentHouse 
+{
+    /*
+        用户表字段：用户的基本信息。数据库字段分别为：
+        | uuid | first_name | middle_name | last_name | description | gender | birthday | avatar_url | role |
+    */
+    struct User 
+    {
+        0 require string first_name;
+        1 require string middle_name;
+        2 require string last_name;
+        3 require string description;
+        4 require string gender;
+        5 require string birthday;
+        6 require string avatar_url;
+        7 require string role = "user";
+    };
+};

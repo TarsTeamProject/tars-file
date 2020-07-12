@@ -1,20 +1,17 @@
-#include "StatusCode.tars"
+#include "./dataStruct/StatusCode.tars"
+#include "./dataStruct/UserStruct.tars"
 
 module RentHouse
 {
-
-    struct User {
-        0 require string name;
-        1 require string gender;
-        2 require string avatar_url;
-        3 require string last_login_time;
-        4 require string role;
-    };
-
-    interface DataBaseService {
-        int hasUser(string name, out bool userExist);
-        int login(string name, string password, string login_time, out int user_id, out User user, out StatusCode status);
-        // 创建用户。创建时，role 默认值为 normal
-        int createUser(string name, string password, string gender, string avatar_url, string login_time, out int user_id, out User user, out StatusCode status);
+    interface DataBaseService 
+    {
+        // 通过给定的 uuid 和 User，向数据库中添加用户记录。
+        int createUser(string uuid, User user, out StatusCode status);
+        // 通过给定的 uuid 返回 User。
+        int getUserByUUID(string uuid, out User user, out StatusCode status);
+        // 通过给定的 名字, page, rows  返回所有匹配的 User(s)。 page，rows。用于实现分页功能。
+        int getUserByName(string name, int page, int rows , out User user, out StatusCode status);
+        // 通过给定的 uuid 和 User，更新用户信息
+        int updateUser(string uuid, User user, out StatusCode status);
     };
 };

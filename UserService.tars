@@ -1,11 +1,16 @@
-#include "DataBaseService.tars"
-#include "StatusCode.tars"
+#include "./dataStruct/StatusCode.tars"
+#include "./dataStruct/UserStruct.tars"
 
 module RentHouse
 {
     interface UserService {
-        // 用户登录
-        int login(string name, string password, out int user_id, out User user, out StatusCode status);
-        int register(string name, string password, string gender, string avatar_url, out int user_id, out User user, out StatusCode status);
+        // 通过给定的 uuid 和 User，注册用户信息。
+        int signup(string uuid, User user, out StatusCode status);
+        // 通过给定的 uuid 返回 User。
+        int getUserByUUID(string uuid, out User user, out StatusCode status);
+        // 通过给定的 名字, page, rows  返回所有匹配的 User(s)。 page，rows。用于实现分页功能。
+        int getUserByName(string name, int page, int rows , out User user, out StatusCode status);
+        // 通过给定的 uuid 和 User，更新用户信息
+        int updateInfo(string uuid, User user, out StatusCode status);
     };
 };
