@@ -7,10 +7,10 @@ module RentHouse
         // 所有状态码参考: 
         // https://docs.google.com/spreadsheets/d/15XNplEK08tlcVM1jdbQiq7kxDbacI_rl9g870iuFDVg/edit#gid=0
         SUCCESS = 200,
+        BAD_REQUEST = 400,
         NOT_FOUND = 404,
         INTERNAL_ERROR = 500,
         USER_NOT_EXSIT = 1001,
-        WRONG_PW_OR_NAME = 1002,
-        USER_EXSIT = 1003,
+        USER_EXSIT = 1002
     };
 };
